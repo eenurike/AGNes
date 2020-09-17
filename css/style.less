@@ -1,3 +1,158 @@
-h1 {
-    color: red;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: lightgreen;
+    
+    transition: 1s;
+    
+    &.wrapper-active {
+        transform: translateX(-30%);
+        transition: 1s;
+       
+    }
+}
+
+
+
+header {
+    
+    .wrapper {
+        display: flex;
+        position: relative;
+        
+        .logo {
+            padding: 5px;
+            background-color: black;
+            color: white;
+            width: 60px;
+            height: 40px;
+        }
+
+        nav {
+            
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+           
+            a {
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: black;
+                
+            }
+
+            @media screen and (max-width: 1100px) {
+                background-color: lightblue;
+                flex-direction: column;
+                height: 100vh;
+                width: 30%;
+                transform: translateX(333%);
+                // transition: 1s;
+                // transform: translateX(1092px);
+               
+                
+                
+
+               &.nav-active {
+                transform: translateX(333%);
+                transition: 1s;
+                // transform: translateX(1092px);
+                
+               
+               }
+            }
+        }
+
+        .burger {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 0 0 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            cursor: pointer;
+            
+            @media screen and (max-width: 1100px){
+                display: flex;
+            }
+
+            span {
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: white;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background-color: white;
+                    position: absolute;
+                    top: 7px;
+                    width: 25px;
+                    height: 2px;
+                    transition: .3s;
+                   
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: white;
+                    position: absolute;
+                    top: -7px;
+                    width: 25px;
+                    height: 2px;
+                    transition: .3s;
+                   
+                }
+
+                &.span-active {
+                    height: 0;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-color: white;
+                        position: absolute;
+                        top: 0;
+                        width: 25px;
+                        height: 2px;
+                        transform: rotate(-45deg);
+                        transition: .3s;
+                       
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        background-color: white;
+                        position: absolute;
+                        top: 0;
+                        width: 25px;
+                        height: 2px;
+                        transform: rotate(45deg);
+                        transition: .3s;
+                       
+                    }
+                }
+            }
+        }
+    }
 }
