@@ -10,12 +10,14 @@ body {
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
-  background-color: lightgreen;
   transition: 1s;
 }
 .wrapper.wrapper-active {
   transform: translateX(-30%);
   transition: 1s;
+}
+header {
+  background-color: lightgreen;
 }
 header .wrapper {
   display: flex;
