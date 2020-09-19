@@ -1,60 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-size: 16px;
-  overflow: hidden;
-}
-.wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-  transition: 1s;
-}
-.wrapper.wrapper-active {
-  transform: translateX(-30%);
-  transition: 1s;
-}
+@import "options.css";
+@import "normalize.css";
 header {
-  background-color: lightgreen;
+  background-color: #6a8cd3;
 }
-header .wrapper {
+header .wrapper_nav {
   display: flex;
   position: relative;
 }
-header .wrapper .logo {
-  padding: 5px;
-  background-color: black;
-  color: white;
-  width: 60px;
-  height: 40px;
-}
-header .wrapper nav {
-  position: fixed;
-  width: 100%;
+header .wrapper_nav .logo {
   display: flex;
-  justify-content: space-around;
+  color: white;
+  font-family: "Medium";
+  font-size: 3.75rem;
+  padding: 15px 0;
 }
-header .wrapper nav a {
+header .wrapper_nav .logo > P {
+  margin-right: 15px;
+}
+header .wrapper_nav .logo_text {
+  font-size: 1.1875rem;
+  border-left: 1px solid white;
+  padding-left: 15px;
+}
+header .wrapper_nav .logo_text > p {
+  margin-top: 2px;
+}
+header .wrapper_nav .logo_text > p:nth-child(1) {
+  margin-top: 0;
+}
+header .wrapper_nav nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+header .wrapper_nav nav a {
   text-decoration: none;
-  font-size: 1.5rem;
-  color: black;
+  font-size: 1.1875rem;
+  color: white;
+  font-family: "Medium";
+  margin-left: 120px;
+  width: 70px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+}
+header .wrapper_nav nav a:nth-child(1) {
+  width: 50px;
+}
+header .wrapper_nav nav a:nth-child(3) {
+  width: 40px;
+}
+header .wrapper_nav nav a:nth-child(4) {
+  width: 60px;
+}
+header .wrapper_nav nav a:hover {
+  font-family: "Bold";
+  border-bottom: 2px solid white;
+  transition: 0.4s;
 }
 @media screen and (max-width: 1100px) {
-  header .wrapper nav {
+  header .wrapper_nav nav {
+    position: fixed;
     background-color: lightblue;
     flex-direction: column;
     height: 100vh;
     width: 30%;
     transform: translateX(333%);
   }
-  header .wrapper nav.nav-active {
+  header .wrapper_nav nav.nav-active {
     transform: translateX(333%);
     transition: 1s;
   }
 }
-header .wrapper .burger {
+header .wrapper_nav .burger {
   width: 50px;
   height: 50px;
   background-color: black;
@@ -68,17 +89,17 @@ header .wrapper .burger {
   cursor: pointer;
 }
 @media screen and (max-width: 1100px) {
-  header .wrapper .burger {
+  header .wrapper_nav .burger {
     display: flex;
   }
 }
-header .wrapper .burger span {
+header .wrapper_nav .burger span {
   position: absolute;
   width: 25px;
   height: 2px;
   background-color: white;
 }
-header .wrapper .burger span::before {
+header .wrapper_nav .burger span::before {
   content: "";
   display: block;
   background-color: white;
@@ -88,7 +109,7 @@ header .wrapper .burger span::before {
   height: 2px;
   transition: 0.3s;
 }
-header .wrapper .burger span::after {
+header .wrapper_nav .burger span::after {
   content: "";
   display: block;
   background-color: white;
@@ -98,10 +119,10 @@ header .wrapper .burger span::after {
   height: 2px;
   transition: 0.3s;
 }
-header .wrapper .burger span.span-active {
+header .wrapper_nav .burger span.span-active {
   height: 0;
 }
-header .wrapper .burger span.span-active::before {
+header .wrapper_nav .burger span.span-active::before {
   content: "";
   display: block;
   background-color: white;
@@ -112,7 +133,7 @@ header .wrapper .burger span.span-active::before {
   transform: rotate(-45deg);
   transition: 0.3s;
 }
-header .wrapper .burger span.span-active::after {
+header .wrapper_nav .burger span.span-active::after {
   content: "";
   display: block;
   background-color: white;
@@ -122,4 +143,44 @@ header .wrapper .burger span.span-active::after {
   height: 2px;
   transform: rotate(45deg);
   transition: 0.3s;
+}
+header .wrapper_header .multy_language {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+header .wrapper_header .multy_language .container {
+  font-size: 1.1875rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.692);
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+header .wrapper_header .multy_language .container .ru {
+  text-align: center;
+  width: 50px;
+}
+header .wrapper_header .multy_language .container .ru.active {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  transition: 0.6s;
+  height: 25px;
+}
+header .wrapper_header .multy_language .container .kz {
+  text-align: center;
+  width: 50px;
+}
+header .wrapper_header .multy_language .container .kz.active {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  transition: 0.6s;
+  height: 25px;
 }

@@ -43,6 +43,27 @@ closeBurger.forEach(function(elem){
 });
 
 
+let multyLanguageRu = document.querySelector('.ru'),
+    multyLanguageKz = document.querySelector('.kz');
+    
+
+    multyLanguageRu.addEventListener('click', function(){
+        if (this.classList.contains('active') == false) {
+            this.classList.add('active');
+            multyLanguageKz.classList.remove('active');
+        } 
+    });
+
+    multyLanguageKz.addEventListener('click', function(){
+        if (this.classList.contains('active') == false) {
+            this.classList.add('active');
+            multyLanguageRu.classList.remove('active');
+        } 
+    });
+
+
+
+
 
 
     
