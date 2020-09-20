@@ -1,3 +1,7 @@
+'use strict';
+
+window.addEventListener("DOMContentLoaded", () => {
+
 let burger = document.querySelector('.burger'),
     nav = document.querySelector('nav'),
     wrapper = document.querySelectorAll('.wrapper'),
@@ -61,7 +65,8 @@ let multyLanguageRu = document.querySelector('.ru'),
         } 
     });
 
-
+  
+});
 
 
 

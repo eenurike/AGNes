@@ -1,11 +1,14 @@
 @import "options.css";
 @import "normalize.css";
 header {
-  background-color: #6a8cd3;
+  background-image: url("../img/header-BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: local;
 }
 header .wrapper_nav {
   display: flex;
-  position: relative;
 }
 header .wrapper_nav .logo {
   display: flex;
@@ -62,16 +65,24 @@ header .wrapper_nav nav a:hover {
   transition: 0.4s;
 }
 @media screen and (max-width: 1100px) {
+  header .wrapper_nav nav a {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
   header .wrapper_nav nav {
     position: fixed;
     background-color: lightblue;
     flex-direction: column;
-    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
     width: 30%;
+    transition: 1s;
     transform: translateX(333%);
   }
   header .wrapper_nav nav.nav-active {
-    transform: translateX(333%);
+    transform: translateX(235%);
     transition: 1s;
   }
 }
@@ -81,7 +92,9 @@ header .wrapper_nav .burger {
   background-color: black;
   border-radius: 50%;
   margin: 0 0 0 auto;
-  position: relative;
+  position: fixed;
+  top: 10px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,12 +168,16 @@ header .wrapper_header .multy_language .container {
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 25px;
+  height: 29px;
   border-radius: 20px;
+  padding: 2px;
   background-color: rgba(0, 0, 0, 0.692);
   color: white;
   overflow: hidden;
   cursor: pointer;
+}
+header .wrapper_header .multy_language .container span {
+  line-height: 25px;
 }
 header .wrapper_header .multy_language .container .ru {
   text-align: center;
@@ -171,7 +188,6 @@ header .wrapper_header .multy_language .container .ru.active {
   color: black;
   border-radius: 20px;
   transition: 0.6s;
-  height: 25px;
 }
 header .wrapper_header .multy_language .container .kz {
   text-align: center;
@@ -182,5 +198,90 @@ header .wrapper_header .multy_language .container .kz.active {
   color: black;
   border-radius: 20px;
   transition: 0.6s;
-  height: 25px;
+}
+header .wrapper_header h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Bold";
+}
+header .wrapper_header .header_content {
+  display: flex;
+  margin-top: 30px;
+}
+header .wrapper_header .header_content-text {
+  max-width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+header .wrapper_header .header_content-text h1 {
+  font-size: 2.125rem;
+  font-family: "Extra-Bold";
+  margin: 0;
+  padding-bottom: 30px;
+}
+header .wrapper_header .header_content-text p {
+  font-family: "Semi-Bold";
+  color: #2d2f30;
+  font-size: 1.875rem;
+}
+header .wrapper_header .header_content-text p:nth-of-type(2) {
+  font-family: "Light";
+  color: #838282;
+  font-size: 1.375rem;
+  padding-top: 15px;
+  padding-right: 35%;
+}
+header .wrapper_header .header_content-text p:nth-of-type(3) {
+  font-size: 1.5625rem;
+  color: #2d2f30;
+  font-family: "Medium";
+  padding-bottom: 30px;
+}
+header .wrapper_header .header_content-text p:nth-of-type(3) strong {
+  font-size: 1.5625rem;
+  color: #2d2f30;
+  font-family: "Medium";
+}
+header .wrapper_header .header_content-text hr {
+  background-color: #0096ff;
+  height: 3px;
+  border: none;
+  margin: 30px 0;
+}
+header .wrapper_header .header_content-text .list span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #0096ff;
+  display: block;
+  margin-right: 30px;
+}
+header .wrapper_header .header_content-text .list p {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "Light";
+  color: #2d2f30;
+  padding: 15px 0 0 0;
+}
+header .wrapper_header .header_content-text .list p:nth-child(1) {
+  padding-top: 0;
+}
+header .wrapper_header .header_content-logo {
+  display: flex;
+  justify-content: center;
+}
+header .wrapper_header .header_content-logo .logo_container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+}
+header .wrapper_header .header_content-logo .logo_container p {
+  font-family: "Bold";
+  color: white;
+  font-size: 1.5625rem;
+  text-align: center;
+  padding-top: 30px;
 }
