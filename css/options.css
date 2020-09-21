@@ -20,6 +20,10 @@ img {
 	height: auto;
 }
 
+
+
+
+
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
@@ -29,7 +33,7 @@ img {
 }
 
 .content_wrapper {
-	padding: 0 30px;
+	padding: 0 20px;
 }
 
 /* @media screen and (max-width: 1200px) {
@@ -97,4 +101,11 @@ img {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Black';
+	src: url('fonts/Akrobat_Black.eot');
+	src: local('☺'), url('../fonts/Akrobat_Black.woff') format('woff'), url('../fonts/Akrobat_Black.ttf') format('truetype'), url('../fonts/Akrobat_Black.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
  
