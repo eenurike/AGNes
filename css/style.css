@@ -294,17 +294,6 @@ header .wrapper_header .header_content-logo .logo_container p {
 main {
   padding-top: 50px;
 }
-main .wrapper .services h3 {
-  font-family: "Black";
-  color: #4f5256;
-  font-size: 2.5rem;
-}
-main .wrapper .services h3 + p {
-  font-size: 1.625rem;
-  color: #9f9d9d;
-  font-family: "Medium";
-  padding: 15px 0 50px 0;
-}
 main .wrapper .services_container {
   display: flex;
   justify-content: space-between;
@@ -442,4 +431,128 @@ main .wrapper .services_container .general .image img {
 }
 .contact-services_wrapper {
   margin-top: 30px;
+}
+section:not(.constacts_header) {
+  background-image: url('../img/contacts-BG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: local;
+}
+section:not(.constacts_header) .wrapper {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+section:not(.constacts_header) .wrapper .contacts {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+section:not(.constacts_header) .wrapper .contacts .tel-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-right: 1px solid #e4e3e3;
+}
+section:not(.constacts_header) .wrapper .contacts .email {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15px;
+}
+section:not(.constacts_header) .wrapper .contacts .tel-content,
+section:not(.constacts_header) .wrapper .contacts .email p {
+  font-family: 'Bold';
+  font-size: 1.125rem;
+}
+section:not(.constacts_header) .wrapper .contacts .tel-number p,
+section:not(.constacts_header) .wrapper .contacts .email p + p {
+  font-family: 'Medium';
+  font-size: 1.1875rem;
+  color: #979797;
+  padding-left: 30px;
+}
+article .wrapper .collective .teamlead {
+  border: 1px solid #e4e3e3;
+  border-radius: 10px;
+  display: flex;
+}
+article .wrapper .collective .teamlead-photo {
+  width: 100%;
+  flex-grow: 1;
+}
+article .wrapper .collective .teamlead-photo img {
+  width: 100%;
+  height: 100%;
+}
+article .wrapper .collective .teamlead-history {
+  display: flex;
+  padding: 20px 30px;
+}
+article .wrapper .collective .teamlead-history p {
+  font-family: 'Medium';
+  font-size: 1.1875rem;
+  color: #979797;
+  padding-bottom: 10px;
+}
+article .wrapper .collective .teamlead-history_block1 {
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+}
+article .wrapper .collective .teamlead-history_block1 > p {
+  font-family: 'Extra-Bold';
+  font-size: 1.4375rem;
+  color: #e32f0c;
+}
+article .wrapper .collective .teamlead-history_block1 .text {
+  margin-top: auto;
+}
+article .wrapper .collective .teamlead-history_block1 .history-list > p {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+article .wrapper .collective .teamlead-history_block1 .history-list > p:nth-child(1) {
+  padding-top: 0;
+}
+article .wrapper .collective .teamlead-history_block1 .history-list > p span {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  display: block;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+article .wrapper .collective .teamlead-history_block2 {
+  border-left: 1px solid #e4e3e3;
+  padding-left: 30px;
+}
+article .wrapper .collective .teamlead .text > p:nth-child(1) {
+  color: black;
+  font-size: 1.125rem;
+  font-family: 'Bold';
+  padding-bottom: 5px;
+}
+article .wrapper .collective .teamlead .text > p:nth-child(2) {
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 1300px) {
+  article .wrapper .collective .teamlead .teamlead-history {
+    max-width: 75%;
+    padding: 15px 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  article .wrapper .collective .teamlead .teamlead-history {
+    max-width: 74%;
+    padding: 10px 20px;
+  }
 }
