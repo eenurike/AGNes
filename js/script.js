@@ -68,6 +68,63 @@ let multyLanguageRu = document.querySelector('.ru'),
   
 });
 
+let block = document.querySelector('.works_area'),
+    item = document.querySelector('.work');
+
+
+
+
+if (window.matchMedia("(max-width: 950px)").matches) {
+    block.classList.add('owl-carousel');
+    item.classList.add('item');
+  } else {
+    
+   
+    block.classList.remove('block');
+    item.classList.remove('item');
+    
+  }
+
+
+
+
+
+// if(matchMedia) {
+//     let screenOpa = window.matchMedia('(max-width: 950px)');
+//     screenOpa.addListener(changes);
+//     changes(screenOpa);
+    
+// }
+
+// function changes(screenOpa) {
+//     if (screenOpa.matches) {
+//         block.classList.add('block');
+//         item.classList.add('item');
+//         console.log('< 950px');
+//     } else {
+//         block.classList.remove('block');
+//         item.classList.remove('item');
+
+        
+        
+//         console.log('> 950px');   
+        
+//     }
+// }
+
+
+$(function() {
+    var $item = $('.block .item');
+
+    $('.block').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        item: 3
+
+    });
+});
+
 
 
 
