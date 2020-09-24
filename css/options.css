@@ -54,6 +54,12 @@ img {
 	}
 }
 
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 14px;
+	}
+}
+
 /* .wrapper-active {
   transform: translateX(-30%);
   transition: 1s;
