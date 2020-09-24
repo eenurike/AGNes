@@ -68,20 +68,21 @@ let multyLanguageRu = document.querySelector('.ru'),
   
 });
 
-let block = document.querySelector('.works_area'),
+
+let areaCarousel = document.querySelector('#area-carousel'),
     item = document.querySelector('.work');
 
 
 
 
 if (window.matchMedia("(max-width: 950px)").matches) {
-    block.classList.add('owl-carousel');
-    item.classList.add('item');
+    areaCarousel.classList.add('owl-carousel');
+    
   } else {
     
    
-    block.classList.remove('block');
-    item.classList.remove('item');
+    areaCarousel.classList.remove('owl-carousel');
+    areaCarousel.removeAttribute('id');
     
   }
 
@@ -113,17 +114,59 @@ if (window.matchMedia("(max-width: 950px)").matches) {
 // }
 
 
-$(function() {
-    var $item = $('.block .item');
+// $(function() {
+//     var $item = $('.block .item');
 
-    $('.block').owlCarousel({
-        loop: true,
-        margin: 10,
-        responsiveClass: true,
-        item: 3
+//     $('.block').owlCarousel({
+//         loop: true,
+//         margin: 10,
+//         responsiveClass: true,
+//         item: 3
 
-    });
+//     });
+// });
+
+const staffCarousel = $('#staff-carousel');
+
+staffCarousel.owlCarousel({
+    loop:true,
+    margin:0,
+    responsiveClass:true,
+    nav: true,
+    items: 1,
+    responsive:{
+        600:{
+            items:2
+    
+        },
+        800:{
+            items:3
+        
+        },
+        1000:{
+            items:4
+        }
+    }
 });
+
+ areaCarousel = $('#area-carousel');
+
+areaCarousel.owlCarousel({
+    loop:true,
+    margin:0,
+    responsiveClass:true,
+    nav: true,
+    items: 3,
+    responsive:{
+        400: {
+            items: 2
+        },
+        600:{
+            items:4
+        }
+    }
+});
+
 
 
 

@@ -43,12 +43,12 @@
             </div>
 
             <div class="wrapper_header" id="closeBurger">
-                <div class="multy_language">
+                <!-- <div class="multy_language">
                     <div class="container">
                         <span class="ru active">Рус</span>
                         <span class="kz ">Каз</span>
                     </div>
-                </div>
+                </div> -->
 
                 <h2 class="content_wrapper">Полное бухгалтерское сопровождение.</h2>
 
@@ -167,9 +167,9 @@
 
 
 
-                <div class="general">
+                <div class="general forMobile">
                     <!--2-->
-                    <div class="add_content">
+                    <div class="add_content forMobile-firstBlock">
                         <div class="general_header">
                             <p>Кадровые работы</p>
                             <p>Сопровождение всех бухгалтерских операций
@@ -209,15 +209,17 @@
                     <div class="add_content contact-services_wrapper">
                         <!--2/1-->
                         <div class="general_header">
-                            <p><strong>Не нашли что искали?</strong></p>
-                            <p>По всем вопросам, будни до 18:00</p>
+                            <p>В любое время без выходных</p>
+
                         </div>
 
-                        <div class="general_header-services contact-services">
+                        <div class="general_header-services contact-services">  
                             <div class="connection">
                                 <p>Связь:</p>
-                                <p>+7 777 00 59 029</p>
-                                <p>+7 707 50 38 817</p>
+                                <div class="text">
+                                    <p>+7 777 00 59 029</p>
+                                   
+                                </div>
                             </div>
 
                             <div class="email">
@@ -228,6 +230,27 @@
 
                     </div>
                     <!--2/1-->
+
+                    <!--2/2-->
+                    <div class="add_content contact-services_wrapper">
+                       
+                        <div class="general_header">
+                            <p>Будни до 18:00</p>
+
+                        </div>
+
+                        <div class="general_header-services contact-services">
+                            <div class="connection">
+                                <p>Связь:</p>
+                                <div class="text">
+                                    
+                                    <p>+7 707 50 38 817</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--2/2-->
                 </div>
                 <!--2-->
 
@@ -422,12 +445,12 @@
                     <!-- </div> -->
                 </div>
 
-                <div class="staff-container">
-                    <div class="staff-wrapper1">
-                        <div class="staff">
+                <div class="staff-container ">
+                    <div class="staff-wrapper owl-carousel owl-theme" id="staff-carousel">
+                        <div class="staff ">
                             <div class="image">
                                 <img src="img/staff.png" alt="">
-    
+
                             </div>
                             <div class="text">
                                 <p>Сотрудник Иванова</p>
@@ -435,11 +458,59 @@
                                 </p>
                             </div>
                         </div>
-    
+
                         <div class="staff">
                             <div class="image">
                                 <img src="img/staff.png" alt="">
-    
+
+                            </div>
+                            <div class="text">
+                                <p>NUrike</p>
+                                <p>Должность:<span>Бухгалтер</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="staff">
+                            <div class="image">
+                                <img src="img/staff.png" alt="">
+
+                            </div>
+                            <div class="text">
+                                <p>Сотрудник Иванова</p>
+                                <p>Должность:<span>Бухгалтер</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="staff">
+                            <div class="image">
+                                <img src="img/staff.png" alt="">
+
+                            </div>
+                            <div class="text">
+                                <p>Сотрудник Иванова</p>
+                                <p>Должность:<span>Бухгалтер</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="staff">
+                            <div class="image">
+                                <img src="img/staff.png" alt="">
+
+                            </div>
+                            <div class="text">
+                                <p>Сотрудник Иванова</p>
+                                <p>Должность:<span>Бухгалтер</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="staff">
+                            <div class="image">
+                                <img src="img/staff.png" alt="">
+
                             </div>
                             <div class="text">
                                 <p>Сотрудник Иванова</p>
@@ -449,31 +520,7 @@
                         </div>
                     </div>
 
-                    <div class="staff-wrapper2">
-                        <div class="staff">
-                            <div class="image">
-                                <img src="img/staff.png" alt="">
-    
-                            </div>
-                            <div class="text">
-                                <p>Сотрудник Иванова</p>
-                                <p>Должность:<span>Бухгалтер</span>
-                                </p>
-                            </div>
-                        </div>
-    
-                        <div class="staff">
-                            <div class="image">
-                                <img src="img/staff.png" alt="">
-    
-                            </div>
-                            <div class="text">
-                                <p>Сотрудник Иванова</p>
-                                <p>Должность:<span>Бухгалтер</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                     
                 </div>
             </div>
         </div>
@@ -493,32 +540,11 @@
                     </div>
 
 
-               
-                    <div class="works_area  block">  <!--Добавить класс block-->
-                        <div class="work">                  <!--Добавить класс item-->
-                           <div class="work_image">
-                                <img src="img/MassTrade.png" alt="">
-                           </div>
-                            <p>Торгово-оптовая
-                                дистрибуция</p>
-                        </div>
 
+                    <div class="works_area  owl-carousel " id="area-carousel">
+                        <!--Добавить класс block-->
                         <div class="work">
-                            <div class="work_image">
-                                <img src="img/roznitsa.png" alt="">
-                            </div>
-                            <p>Торговая розница</p>
-                        </div>
-
-                        <div class="work">
-                            <div class="work_image">
-                                <img src="img/MassTrade.png" alt="">
-                            </div>
-                            <p>Торгово-оптовая
-                                дистрибуция</p>
-                        </div>
-
-                        <div class="work">
+                            <!--Добавить класс item-->
                             <div class="work_image">
                                 <img src="img/MassTrade.png" alt="">
                             </div>
@@ -535,9 +561,18 @@
 
                         <div class="work">
                             <div class="work_image">
-                                <img src="img/roznitsa.png" alt="">
+                                <img src="img/MassTrade.png" alt="">
                             </div>
-                            <p>Торговая розница</p>
+                            <p>Торгово-оптовая
+                                дистрибуция</p>
+                        </div>
+
+                        <div class="work">
+                            <div class="work_image">
+                                <img src="img/MassTrade.png" alt="">
+                            </div>
+                            <p>Торгово-оптовая
+                                дистрибуция</p>
                         </div>
 
                         <div class="work">
@@ -581,9 +616,23 @@
                             </div>
                             <p>Торговая розница</p>
                         </div>
-                      
+
+                        <div class="work">
+                            <div class="work_image">
+                                <img src="img/roznitsa.png" alt="">
+                            </div>
+                            <p>Торговая розница</p>
+                        </div>
+
+                        <div class="work">
+                            <div class="work_image">
+                                <img src="img/roznitsa.png" alt="">
+                            </div>
+                            <p>Торговая розница</p>
+                        </div>
+
                     </div>
-              
+
 
 
                 </div>
@@ -593,21 +642,21 @@
                         <div class="title">
                             <p>Мы предлагаем</p>
                         </div>
-    
+
                         <div class="weOffer_list">
                             <p>Интеграция отраслевых решений 1С с бухгалтерской программой</p>
-                            <p>Предоставление удобной рабочей среды для кассиров, кадровиков и 
+                            <p>Предоставление удобной рабочей среды для кассиров, кадровиков и
                                 администраторов магазинов</p>
-                            <p>Подготовка учета и отчетности к внешнему финансированию, работе с 
+                            <p>Подготовка учета и отчетности к внешнему финансированию, работе с
                                 госзаказчиками и тендерам</p>
                             <p>Специализированные формы отчетности, особые виды налогов</p>
                             <p>Отраслевое налоговое планирование</p>
                             <p>Готовое решение по интеграции с любыми операторами ЭДО</p>
                         </div>
                     </div>
-                    
+
                     <div class="weOffer_contact">
-                        
+
                         <div class="notFound">
                             <p>Не нашли что искали?</p>
                             <p>По всем вопросам, будни до 18:00</p>
