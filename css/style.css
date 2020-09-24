@@ -867,9 +867,6 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text p:nth-
   font-size: 1rem;
   padding-top: 10px;
 }
-.advantages .areas .owl-carousel .owl-nav button.owl-prev {
-  background-color: red;
-}
 .advantages .areas .weOffer {
   flex-grow: 1;
   margin-left: 20px;
