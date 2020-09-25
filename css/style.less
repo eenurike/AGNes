@@ -14,9 +14,32 @@ header {
 	padding-bottom: 120px;
 
 	.wrapper {
+		.up {
+			position: fixed;
+			display: none;
+			bottom: 0;
+			right: 0;
+			padding: 10px;
+			background-color: red;
+			z-index: 99999;
+			cursor: pointer;
+		}
+
 		&_nav {
+			
+
 			display: flex;
-			// position: relative;
+			
+			@media screen and(min-width:1101px) {
+				position: fixed;
+			background-color: blue;
+			width: 100%;
+			top: 0;
+			left: 0;
+			padding: 0 20px;
+			
+			z-index: 999;
+			}
 
 			.logo {
 				display: flex;
@@ -246,7 +269,7 @@ header {
 				color: white;
 				font-size: 1.5rem;
 				font-family: "Bold";
-				padding-top: 120px;
+				padding-top: 230px;
 			}
 
 			.header_content {
@@ -653,14 +676,11 @@ section:not(.constacts_header) {
 	border-top: 8px solid #e32f0c;
 	border-bottom: 8px solid #e32f0c;
 
-
-
 	.wrapper {
 		padding: 50px 0;
 		display: flex;
 		justify-content: center;
 
-		
 		@media screen and (max-width: 550px) {
 			padding: 50px 20px;
 		}
@@ -712,20 +732,17 @@ section:not(.constacts_header) {
 				padding: 15px 0;
 				border-right: 1px solid #e4e3e3;
 
-				
-			@media screen and (max-width: 500px) {
-				justify-content: flex-start;
+				@media screen and (max-width: 500px) {
+					justify-content: flex-start;
+				}
 
-			}
-
-			@media screen and (max-width: 450px) {
-				width: 100%;
-				justify-content: center;
-				border: none;
-				border-bottom:1px solid #e4e3e3;
-				padding-bottom: calc(15px / 2);
-			}
-
+				@media screen and (max-width: 450px) {
+					width: 100%;
+					justify-content: center;
+					border: none;
+					border-bottom: 1px solid #e4e3e3;
+					padding-bottom: calc(15px / 2);
+				}
 			}
 
 			.email {
@@ -746,7 +763,6 @@ section:not(.constacts_header) {
 					padding-bottom: 15px;
 					padding-top: calc(15px / 2);
 				}
-			
 			}
 
 			.tel-content,
@@ -765,8 +781,6 @@ section:not(.constacts_header) {
 
 				@media screen and (max-width: 450px) {
 					padding-left: 10px;
-	
-					
 				}
 			}
 		}
@@ -861,19 +875,19 @@ article {
 					border: none;
 
 					&::after {
-						content:'';
+						content: "";
 						position: absolute;
 						display: block;
 						bottom: 2%;
 						left: 2%;
 						width: 257px;
 						height: 195px;
-						background-image: url('../img/agnes-logo2.png');
+						background-image: url("../img/agnes-logo2.png");
 					}
 
 					.teamlead-photo {
 						max-width: 40%;
-						
+
 						border-bottom: 1px solid #e4e3e3;
 						border-left: 1px solid #e4e3e3;
 						border-top: 1px solid #e4e3e3;
@@ -893,15 +907,12 @@ article {
 						max-width: 60%;
 						margin: 0;
 						margin-left: auto;
-						
 
 						border-bottom: 1px solid #e4e3e3;
 						border-right: 1px solid #e4e3e3;
 						border-top: 1px solid #e4e3e3;
 						border-bottom-left-radius: 11px;
 						border-bottom-right-radius: 11px;
-
-					
 					}
 				}
 
@@ -934,10 +945,13 @@ article {
 					}
 				}
 
-				@media screen and (max-width: 700px) {
-					max-width: 90%;
+				// @media screen and (max-width: 700px) {
+				// 	max-width: 90%;
 
-					
+				// }
+
+				@media screen and (max-width: 550px) {
+					max-width: 100%;
 				}
 			}
 
@@ -949,9 +963,7 @@ article {
 					// justify-content: space-evenly;
 					// padding: 0 20px;
 
-
 					.staff {
-						
 						// max-width: calc(100% / 3);
 						width: 80%;
 						border: 1px solid #e4e3e3;
@@ -983,15 +995,32 @@ article {
 							}
 						}
 					}
+
+					
+
+					// &.owl-theme .owl-dots .owl-dot.active  {
+					// 	border: none;
+						
+					// 	span{
+					// 		background-color: rgb(226, 49, 49);
+					// 	}	
+					
+					// }
+
+				
 				}
 
+				
 			}
 		}
 	}
 }
 
-.advantages {
 
+		
+
+
+.advantages {
 	border: none;
 	.areas {
 		display: flex;
@@ -1024,12 +1053,8 @@ article {
 						padding-top: 10px;
 					}
 				}
-				
-
-				
 			}
 		}
-
 
 		.weOffer {
 			flex-grow: 1;
@@ -1144,19 +1169,14 @@ article {
 				.weOffer_contact {
 					margin-top: 20px;
 					margin-left: 0;
-					width: 60%;
+					width: 100%;
 				}
+			}
+		}
 
-				&::after {
-					content: "LOGO";
-					display: block;
-					position: absolute;
-					bottom: 10%;
-					right: 10%;
-					width: 100px;
-					height: 100px;
-					background-image: url("../img/MassTrade.png");
-				}
+		@media screen and (max-width: 500px) {
+			.weOffer_contact {
+				max-width: 100% !important;
 			}
 		}
 	}

@@ -47,33 +47,63 @@ closeBurger.forEach(function(elem){
 });
 
 
-let multyLanguageRu = document.querySelector('.ru'),
-    multyLanguageKz = document.querySelector('.kz');
+// let multyLanguageRu = document.querySelector('.ru'),
+//     multyLanguageKz = document.querySelector('.kz');
     
 
-    multyLanguageRu.addEventListener('click', function(){
-        if (this.classList.contains('active') == false) {
-            this.classList.add('active');
-            multyLanguageKz.classList.remove('active');
-        } 
-    });
+//     multyLanguageRu.addEventListener('click', function(){
+//         if (this.classList.contains('active') == false) {
+//             this.classList.add('active');
+//             multyLanguageKz.classList.remove('active');
+//         } 
+//     });
 
-    multyLanguageKz.addEventListener('click', function(){
-        if (this.classList.contains('active') == false) {
-            this.classList.add('active');
-            multyLanguageRu.classList.remove('active');
-        } 
-    });
+//     multyLanguageKz.addEventListener('click', function(){
+//         if (this.classList.contains('active') == false) {
+//             this.classList.add('active');
+//             multyLanguageRu.classList.remove('active');
+//         } 
+//     });
 
   
 });
 
 
+$(function(){
+    $('nav a').on('click', function(e){
+        e.preventDefault();
+
+        let selector = $(this).attr('href');
+
+        let h = $(selector);
+
+        $('html, body').animate({
+            scrollTop:h.offset().top
+        }, 1000);
+    });
+});
+
+let btnUp = $('.up');
+$(document).on('scroll', function() {
+    let top = $(this).scrollTop();
+
+    if(top > 200) {
+        btnUp.fadeIn(500);
+    } else {
+        btnUp.fadeOut(500);
+    }
+});
+
+btnUp.on('click', function(){
+    $('html, body').animate({
+        scrollTop:0
+    }, 1500);
+});
+
+
+
 let areaCarousel = document.querySelector('#area-carousel'),
     item = document.querySelector('.work');
-
-
-
 
 if (window.matchMedia("(max-width: 950px)").matches) {
     areaCarousel.classList.add('owl-carousel');
@@ -86,43 +116,18 @@ if (window.matchMedia("(max-width: 950px)").matches) {
     
   }
 
-
-
-
-
-// if(matchMedia) {
-//     let screenOpa = window.matchMedia('(max-width: 950px)');
-//     screenOpa.addListener(changes);
-//     changes(screenOpa);
-    
-// }
-
-// function changes(screenOpa) {
-//     if (screenOpa.matches) {
-//         block.classList.add('block');
-//         item.classList.add('item');
-//         console.log('< 950px');
-//     } else {
-//         block.classList.remove('block');
-//         item.classList.remove('item');
-
-        
-        
-//         console.log('> 950px');   
-        
-//     }
-// }
-
-
-
-
+  
 const staffCarousel = $('#staff-carousel');
 
 staffCarousel.owlCarousel({
     loop:true,
     margin:0,
     responsiveClass:true,
-    nav: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    
     items: 1,
     responsive:{
         600:{
@@ -145,7 +150,10 @@ areaCarousel.owlCarousel({
     loop:true,
     margin:0,
     responsiveClass:true,
-    nav: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     items: 3,
     responsive:{
         400: {
