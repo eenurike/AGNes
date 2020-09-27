@@ -50,7 +50,19 @@ img {
 	}
 }
 
-@media screen and (max-width: 1374px) {
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+/* .wrapper-active {
+  transform: translateX(-30%);
+  transition: 1s;
+ 
+} */
+
+@media screen and (max-width: 1310px) {
 	.wrapper {
 		padding: 0 20px;
 	}
