@@ -20,9 +20,10 @@ burger.addEventListener('click', function(event){
     });
 
     burgerArrow.classList.toggle('span-active');
+    burger.classList.toggle('burgerActive');
 
     
-});
+// });
 
 function removeEvents() {
     nav.classList.remove('nav-active');
@@ -34,6 +35,7 @@ function removeEvents() {
     });
 
     burgerArrow.classList.remove('span-active');
+    burger.classList.remove('burgerActive');
 }
 
 
@@ -45,6 +47,9 @@ closeBurger.forEach(function(elem){
         } 
     });
 });
+
+
+
 
 
 // let multyLanguageRu = document.querySelector('.ru'),
@@ -67,6 +72,7 @@ closeBurger.forEach(function(elem){
 
   
 });
+
 
 
 $(function(){
@@ -93,6 +99,25 @@ $(document).on('scroll', function() {
         btnUp.fadeOut(500);
     }
 });
+
+let headerNav = $('.wrapper_nav');
+
+$(document).on('scroll', function() {
+    let top = $(this).scrollTop();
+
+    if(top > 100) {
+        headerNav.addClass('scroll');
+       
+
+    } else {
+        
+        headerNav.removeClass('scroll');
+        
+    }
+
+    
+});
+
 
 btnUp.on('click', function(){
     $('html, body').animate({
@@ -221,4 +246,4 @@ $('.card-carousel').slick({
 
 
 
-    
+});   
