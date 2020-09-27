@@ -165,7 +165,59 @@ areaCarousel.owlCarousel({
     }
 });
 
-
+$('.card-carousel').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    draggable: true,
+    infinite: false,
+    nextArrow: '.slider-next-button',
+    prevArrow: '.slider-prev-button',
+    responsive: [
+      {
+        breakpoint: 1186,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 855,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+          breakpoint: 458,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true
+          }
+        }
+    ]
+  });
+  
+  let elementArray = document.querySelectorAll(".feedback-card");
+  $('.card-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      
+      if(elementArray[0].classList.contains('slick-active')){
+          $(".left-active").css({opacity: "0", pointerEvents: "none", zIndex: "1"});
+          $(".left-inactive").css({zIndex: "2"});
+      } else {
+          $(".left-active").css({opacity: "1", pointerEvents: "auto", zIndex: "2"});
+          $(".left-inactive").css({zIndex: "1"});
+      }
+      if (elementArray[elementArray.length -1].classList.contains('slick-active')){
+          $(".right-active").css({opacity: "0", pointerEvents: "none", zIndex: "1"});
+          $(".right-inactive").css({zIndex: "2"});
+      } else {
+          $(".right-active").css({opacity: "1", pointerEvents: "auto", zIndex: "2"});
+          $(".right-inactive").css({zIndex: "1"});
+      }
+      
+  });
 
 
 
