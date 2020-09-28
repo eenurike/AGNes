@@ -698,6 +698,14 @@ main {
 								}
 							}
 
+							@media screen and (max-width: 1000px) {
+								
+									padding-left: 10px;
+									padding-right: 10px;
+								
+							}
+
+
 							&.arrow {
 								border-bottom: 1px solid rgb(211, 211, 211);
 							}
@@ -1190,6 +1198,12 @@ article {
 					}
 				}
 
+				@media screen and (max-width: 1280px) {
+					.teamlead-photo {
+						max-width: 50%;
+					}
+				}
+
 				position: relative;
 
 				@media screen and (max-width: 1100px) {
@@ -1251,8 +1265,28 @@ article {
 
 					.teamlead-photo {
 						max-width: 100%;
+						// object-fit: cover;
+						height: 430px;
 						border: none;
 						border-bottom: 1px solid #e4e3e3;
+						display: flex;
+						justify-content: center;
+
+						background-image: url('../img/agnes-logo2.png');
+						background-repeat: repeat-x;
+						background-size: 144px;
+						background-position: 287px center ;
+						background-attachment: local;
+						img {
+							display: block;
+						}
+
+						img:nth-of-type(1) {
+							display: none;
+						}
+
+						
+
 					}
 
 					.teamlead-history_block1 {
@@ -1269,13 +1303,23 @@ article {
 					}
 				}
 
-				// @media screen and (max-width: 700px) {
-				// 	max-width: 90%;
+				@media screen and (min-width: 801px) {
+					.teamlead-photo {
+						img {
+							display: block;
+						}
 
-				// }
+						img:nth-of-type(2) {
+							display: none;
+						}
+
+
+					}
+				}
 
 				@media screen and (max-width: 550px) {
 					max-width: 100%;
+
 				}
 			}
 
@@ -1283,26 +1327,52 @@ article {
 				padding-top: 30px;
 
 				.staff-wrapper {
-					// display: flex;
-					// justify-content: space-evenly;
-					// padding: 0 20px;
+
 
 					padding: 20px 0;
 
 					.staff {
-						// max-width: calc(100% / 3);
+						display: flex;
+						flex-direction: column;
 						width: 80%;
+						
 						border: 1px solid #e4e3e3;
 						border-radius: 11px;
 						margin-left: 35px;
 
 						.image {
+							height: 250px;
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-position: center center;
+							background-attachment: local;
+							border-top-left-radius: 11px;
+							border-top-right-radius: 11px;
+							background-color: lightgray;
+							
+							&.staff1 {
+								background-image: url("../img/staff1.jpg");
+								background-position: center 18%;
+								background-size: 250px;
+							}
+
+							&.staff2 {
+								background-image: url("../img/staff2.jpg");
+								background-position: center 18%;
+							}
+
+							&.staff3 {
+								background-image: url("../img/staff3.jpg");
+								background-position: center 18%;
+							}
 						}
 
 						.text {
 							padding: 15px;
+							
 
 							p {
+								
 								font-family: "Extra-Bold";
 								font-size: 1.4375rem;
 
@@ -1317,6 +1387,12 @@ article {
 										color: #979797;
 										margin-left: 15px;
 									}
+								}
+							}
+
+							&.staff3 {
+								span {
+									margin-left: 5px !important;
 								}
 							}
 						}
@@ -1364,7 +1440,7 @@ article {
 
 				.work {
 					-webkit-flex-basis: 151px;
-					flex-basis: 151px;
+					flex-basis: 151px;			
 					display: -webkit-box;
 					display: -webkit-flex;
 					display: -moz-box;
@@ -1381,14 +1457,18 @@ article {
 					flex-direction: column;
 					margin-top: 20px;
 
-					&_image {
-					}
 					p {
 						text-align: center;
 						font-family: "Semi-Bold";
 						color: black;
 						font-size: 1rem;
 						padding-top: 10px;
+					}
+
+					@media screen and (max-width: 400px) {
+						width: 100px;
+						margin: 0 auto;
+						margin-top: 20px;
 					}
 				}
 			}

@@ -179,7 +179,7 @@ areaCarousel.owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    items: 3,
+    items: 2,
     responsive:{
         400: {
             items: 2
