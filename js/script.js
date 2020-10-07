@@ -19,11 +19,10 @@ burger.addEventListener('click', function(event){
       
     });
 
-    burgerArrow.classList.toggle('span-active');
-    burger.classList.toggle('burgerActive');
 
-    
-// });
+    burgerArrow.classList.toggle('span-active');
+
+});
 
 function removeEvents() {
     nav.classList.remove('nav-active');
@@ -35,7 +34,6 @@ function removeEvents() {
     });
 
     burgerArrow.classList.remove('span-active');
-    burger.classList.remove('burgerActive');
 }
 
 
@@ -71,7 +69,7 @@ closeBurger.forEach(function(elem){
 //     });
 
   
-});
+// });
 
 
 

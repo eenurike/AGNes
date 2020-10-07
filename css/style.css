@@ -210,20 +210,6 @@ header .wrapper_nav .burger {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-header .wrapper_nav .burger:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  box-shadow: 0 0 8px 1px #a7a7a7;
-}
-header .wrapper_nav .burger.burgerActive {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  box-shadow: 0 0 8px 1px #a7a7a7;
-}
 @media screen and (max-width: 1100px) {
   header .wrapper_nav .burger {
     display: -webkit-box;
@@ -977,6 +963,10 @@ section:not(.constacts_header) .wrapper .contacts .email p + p {
     padding-left: 10px;
   }
 }
+article .wrapper .allColective {
+  display: flex;
+  justify-content: center;
+}
 article .wrapper .collective .teamlead {
   border-radius: 10px;
   display: -webkit-box;
@@ -1116,7 +1106,7 @@ article .wrapper .collective .teamlead .text > p:nth-child(2) {
     background-image: url('../img/agnes-logo2.png');
     background-repeat: repeat-x;
     background-size: 144px;
-    background-position: 287px center ;
+    background-position: 287px center;
     background-attachment: local;
   }
   article .wrapper .collective .teamlead .teamlead-photo img {
@@ -1187,6 +1177,10 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff
   background-image: url("../img/staff3.jpg");
   background-position: center 18%;
 }
+article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff4 {
+  background-image: url("../img/staff4.jpg");
+  background-position: center 18%;
+}
 article .wrapper .collective .staff-container .staff-wrapper .staff .text {
   padding: 15px;
 }
@@ -1206,6 +1200,16 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text p:nth-
   margin-left: 15px;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff3 span {
+  margin-left: 5px !important;
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 {
+  padding-bottom: 0;
+  padding-right: 0;
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 p:nth-of-type(2) {
+  padding-top: 5px;
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 span {
   margin-left: 5px !important;
 }
 .advantages {
