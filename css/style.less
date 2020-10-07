@@ -1102,13 +1102,18 @@ section:not(.constacts_header) {
 article {
 	.wrapper {
 		.allColective {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
 			display: flex;
-			justify-content: center;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			   -moz-box-pack: center;
+			        justify-content: center;
 		}
 
 		.collective {
 			.teamlead {
-				// border: 1px solid #e4e3e3;
 				border-radius: 10px;
 				display: -webkit-box;
 				display: -webkit-flex;
@@ -1139,9 +1144,6 @@ article {
 				.teamlead-history_block1 {
 					padding: 20px;
 					max-width: 35%;
-
-					// display: flex;
-					// flex-direction: column;
 					>p {
 						font-family: "Extra-Bold";
 						font-size: 1.4375rem;
@@ -1269,8 +1271,14 @@ article {
 						height: 430px;
 						border: none;
 						border-bottom: 1px solid #e4e3e3;
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -moz-box;
 						display: flex;
-						justify-content: center;
+						-webkit-box-pack: center;
+						-webkit-justify-content: center;
+						   -moz-box-pack: center;
+						        justify-content: center;
 
 						background-image: url('../img/agnes-logo2.png');
 						background-repeat: repeat-x;
@@ -1333,8 +1341,16 @@ article {
 					padding: 20px 0;
 
 					.staff {
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -moz-box;
 						display: flex;
-						flex-direction: column;
+						-webkit-box-orient: vertical;
+						-webkit-box-direction: normal;
+						-webkit-flex-direction: column;
+						   -moz-box-orient: vertical;
+						   -moz-box-direction: normal;
+						        flex-direction: column;
 						width: 80%;
 
 						border: 1px solid #e4e3e3;

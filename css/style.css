@@ -964,7 +964,13 @@ section:not(.constacts_header) .wrapper .contacts .email p + p {
   }
 }
 article .wrapper .allColective {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
   justify-content: center;
 }
 article .wrapper .collective .teamlead {
@@ -1101,7 +1107,13 @@ article .wrapper .collective .teamlead .text > p:nth-child(2) {
     height: 430px;
     border: none;
     border-bottom: 1px solid #e4e3e3;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
     justify-content: center;
     background-image: url('../img/agnes-logo2.png');
     background-repeat: repeat-x;
@@ -1147,7 +1159,15 @@ article .wrapper .collective .staff-container .staff-wrapper {
   padding: 20px 0;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
   flex-direction: column;
   width: 80%;
   border: 1px solid #e4e3e3;
