@@ -11,6 +11,11 @@ header {
   background-attachment: local;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 700px) {
+  header {
+    background-attachment: fixed;
+  }
+}
 header .wrapper .up {
   position: fixed;
   display: none;
@@ -69,6 +74,13 @@ header .wrapper_nav .logo {
 }
 header .wrapper_nav .logo > P {
   margin-right: 15px;
+}
+@media screen and (max-width: 700px) {
+  header .wrapper_nav .logo > P {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+  }
 }
 header .wrapper_nav .logo_text {
   font-size: 1.1875rem;
@@ -466,6 +478,11 @@ header .wrapper_header .header_content-logo {
     justify-content: center;
   }
 }
+@media screen and (max-width: 700px) {
+  header .wrapper_header .header_content-logo {
+    display: none;
+  }
+}
 @media screen and (max-width: 850px) {
   header .wrapper_header .header_content-logo {
     -webkit-box-pack: start;
@@ -507,11 +524,6 @@ header .wrapper_header .header_content-logo .logo_container p {
 @media screen and (max-width: 750px) {
   header .wrapper_header .header_content-logo .logo_container {
     width: 80%;
-  }
-}
-@media screen and (max-width: 500px) {
-  header .wrapper_header .header_content-logo .logo_container {
-    width: 100%;
   }
 }
 main {
@@ -561,7 +573,7 @@ main .wrapper .services_container .general {
 @media screen and (max-width: 750px) {
   main .wrapper .services_container .general {
     max-width: 100%;
-    padding-top: 20px;
+    padding-top: 30px;
   }
   main .wrapper .services_container .general.forMobile {
     -webkit-flex-wrap: wrap;
@@ -584,7 +596,7 @@ main .wrapper .services_container .general {
 main .wrapper .services_container .general .add_content {
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 2px #bdbdbd;
+  box-shadow: 0 0 10px 2px #e7e7e7;
 }
 @media screen and (max-width: 1000px) {
   main .wrapper .services_container .general .add_content {
@@ -601,17 +613,23 @@ main .wrapper .services_container .general .add_content .general_header p:nth-ch
   font-size: 1.4375rem;
   padding-bottom: 15px;
 }
+main .wrapper .services_container .general .add_content .general_header-services.block3 p:nth-child(2) {
+  color: #9f9e9e;
+  font-size: 1rem;
+  font-family: 'Semi-Bold';
+  padding: 5px 0 !important;
+  padding-left: 30px !important;
+}
+@media screen and (max-width: 1000px) {
+  main .wrapper .services_container .general .add_content .general_header-services.block3 p:nth-child(2) {
+    padding-left: 10px !important;
+  }
+}
 main .wrapper .services_container .general .add_content .general_header-services p {
   font-family: "Bold";
   font-size: 1.125rem;
   color: black;
   padding: 30px;
-}
-@media screen and (max-width: 1000px) {
-  main .wrapper .services_container .general .add_content .general_header-services p p {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 @media screen and (max-width: 1000px) {
   main .wrapper .services_container .general .add_content .general_header-services p {
@@ -798,6 +816,12 @@ section:not(.constacts_header) {
   border-top: 8px solid #e32f0c;
   border-bottom: 8px solid #e32f0c;
 }
+@media screen and (max-width: 700px) {
+  section:not(.constacts_header) {
+    background-image: unset;
+    background-color: #423b3a;
+  }
+}
 section:not(.constacts_header) .wrapper {
   padding: 50px 0;
   display: -webkit-box;
@@ -979,7 +1003,7 @@ article .wrapper .collective .teamlead {
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
-  box-shadow: 0 0 10px 2px #bdbdbd;
+  box-shadow: 0 0 10px 2px #e7e7e7;
   position: relative;
 }
 article .wrapper .collective .teamlead-photo {
@@ -1020,17 +1044,22 @@ article .wrapper .collective .teamlead .teamlead-history_block1 .history-list > 
   align-items: center;
   padding-top: 10px;
   padding-bottom: 0;
+  padding-left: 30px;
+  position: relative;
 }
 article .wrapper .collective .teamlead .teamlead-history_block1 .history-list > p:nth-child(1) {
   padding-top: 0;
 }
-article .wrapper .collective .teamlead .teamlead-history_block1 .history-list > p span {
+article .wrapper .collective .teamlead .teamlead-history_block1 .history-list > p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 53%;
+  left: 0;
   width: 7px;
   height: 7px;
-  background-color: red;
-  display: block;
+  background-color: #e32f0c;
   border-radius: 100%;
-  margin-right: 30px;
 }
 article .wrapper .collective .teamlead .teamlead-history_block2 {
   max-width: 35%;
@@ -1172,7 +1201,7 @@ article .wrapper .collective .staff-container .staff-wrapper .staff {
   width: 80%;
   border: 1px solid #e4e3e3;
   border-radius: 11px;
-  margin-left: 35px;
+  margin: 0 auto;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image {
   height: 250px;
@@ -1226,8 +1255,18 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4
   padding-bottom: 0;
   padding-right: 0;
 }
+@media screen and (max-width: 500px) {
+  article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 {
+    padding-bottom: 15px;
+  }
+}
 article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 p:nth-of-type(2) {
   padding-top: 5px;
+}
+@media screen and (max-width: 500px) {
+  article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 p:nth-of-type(2) {
+    padding: 10px 0;
+  }
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 span {
   margin-left: 5px !important;
@@ -1245,7 +1284,7 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4
   max-width: -webkit-calc(40%);
   max-width: calc(60% - 20px);
   border-radius: 11px;
-  box-shadow: 0 0 10px 2px #bdbdbd;
+  box-shadow: 0 0 10px 2px #e7e7e7;
 }
 .advantages .areas_wrapper .works_area {
   display: -webkit-box;
@@ -1299,7 +1338,7 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4
   margin-left: 20px;
 }
 .advantages .areas .weOffer_container {
-  box-shadow: 0 0 10px 2px #bdbdbd;
+  box-shadow: 0 0 10px 2px #e7e7e7;
   border-radius: 11px;
 }
 .advantages .areas .weOffer_container .weOffer_list {
@@ -1326,7 +1365,7 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4
 .advantages .areas .weOffer .weOffer_contact {
   margin-top: 20px;
   max-width: 70%;
-  box-shadow: 0 0 10px 2px #bdbdbd;
+  box-shadow: 0 0 10px 2px #e7e7e7;
   padding: 20px;
   border-radius: 11px;
 }
