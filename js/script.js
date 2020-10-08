@@ -147,9 +147,9 @@ staffCarousel.owlCarousel({
     margin:0,
     responsiveClass:true,
     nav: false,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     
     items: 1,
     responsive:{
