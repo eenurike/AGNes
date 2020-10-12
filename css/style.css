@@ -994,7 +994,14 @@ section:not(.constacts_header) .wrapper .contacts .email p + p {
   }
 }
 article .wrapper .allColective {
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
 }
 article .wrapper .collective .teamlead {
   border-radius: 10px;
