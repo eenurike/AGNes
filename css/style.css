@@ -1218,6 +1218,8 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .image {
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
   background-color: lightgray;
+  background-image: url("../img/placeholder.png");
+  background-position: center 18%;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff1 {
   background-image: url("../img/staff1.jpg");
@@ -1257,24 +1259,24 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text p:nth-
 article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff3 span {
   margin-left: 5px !important;
 }
-article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 {
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding {
   padding-bottom: 0;
   padding-right: 0;
 }
 @media screen and (max-width: 500px) {
-  article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 {
+  article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding {
     padding-bottom: 15px;
   }
 }
-article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 p:nth-of-type(2) {
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding p:nth-of-type(2) {
   padding-top: 5px;
 }
 @media screen and (max-width: 500px) {
-  article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 p:nth-of-type(2) {
+  article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding p:nth-of-type(2) {
     padding: 10px 0;
   }
 }
-article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4 span {
+article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding span {
   margin-left: 5px !important;
 }
 .advantages {
@@ -1516,10 +1518,6 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff4
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  justify-content: space-between;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
