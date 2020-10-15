@@ -1,0 +1,4 @@
+User-agent: *
+user-agent: Googlebot
+user-agent: Yandexbot
+Allow: /
