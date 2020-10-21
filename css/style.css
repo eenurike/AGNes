@@ -1552,6 +1552,11 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
   -moz-box-pack: center;
   justify-content: center;
   min-width: 180px;
+  width: 180px;
+  height: 120px;
+}
+.partners-icon-frame .partners-img-box:not(.forMargin) {
+  margin-left: 30px;
 }
 @media screen and (max-width: 940px) {
   .partners-icon-frame .partners-img-box {
@@ -1681,4 +1686,8 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
   .block-margin-bottom {
     margin-bottom: 40px;
   }
+}
+.slick-list {
+  display: flex;
+  align-items: flex-start;
 }
