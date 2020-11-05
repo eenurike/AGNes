@@ -1768,10 +1768,10 @@ article {
 	display: -webkit-flex;
 	display: -moz-box;
 	display: flex;
-	// -webkit-box-pack: justify;
-	// -webkit-justify-content: space-between;
-	// -moz-box-pack: justify;
-	// justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-around;
+	-moz-box-pack: justify;
+	justify-content: space-around;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 
@@ -1800,16 +1800,23 @@ article {
 		-moz-box-pack: center;
 		justify-content: center;
 		min-width: 180px;
-
 		width: 180px;
 		height: 120px;
 
-		&:not(.forMargin) {
-			margin-left: 30px;
-		}
 
 		@media screen and (max-width: 940px) {
 			margin: 22.5px 15px 22.5px 15px;
+		}
+
+		img {
+			height: 150px;
+			
+		}
+
+		&:nth-child(1) {
+			img {
+				height: 125px;
+			}
 		}
 	}
 }

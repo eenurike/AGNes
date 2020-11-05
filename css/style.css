@@ -1522,6 +1522,10 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-around;
+  -moz-box-pack: justify;
+  justify-content: space-around;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1555,13 +1559,16 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
   width: 180px;
   height: 120px;
 }
-.partners-icon-frame .partners-img-box:not(.forMargin) {
-  margin-left: 30px;
-}
 @media screen and (max-width: 940px) {
   .partners-icon-frame .partners-img-box {
     margin: 22.5px 15px 22.5px 15px;
   }
+}
+.partners-icon-frame .partners-img-box img {
+  height: 150px;
+}
+.partners-icon-frame .partners-img-box:nth-child(1) img {
+  height: 125px;
 }
 .carousel-frame {
   position: relative;
