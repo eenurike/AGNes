@@ -1555,7 +1555,7 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
   -webkit-justify-content: center;
   -moz-box-pack: center;
   justify-content: center;
-  min-width: 180px;
+  max-width: 180px;
   width: 180px;
   height: 120px;
 }
@@ -1569,6 +1569,14 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text.common
 }
 .partners-icon-frame .partners-img-box:nth-child(1) img {
   height: 125px;
+}
+.partners-icon-frame .partners-img-box:nth-child(5) img {
+  height: 125px;
+  margin-top: 5px;
+}
+.partners-icon-frame .partners-img-box:nth-child(6) img {
+  height: 125px;
+  margin-top: 5px;
 }
 .carousel-frame {
   position: relative;
