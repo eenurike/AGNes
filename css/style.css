@@ -557,7 +557,7 @@ main .wrapper .services_container {
   }
 }
 main .wrapper .services_container .general {
-  max-width: -webkit-calc(8.33333333%);
+  max-width: -webkit-calc(100% / 3 - 25px);
   max-width: calc(100% / 3 - 25px);
   display: -webkit-box;
   display: -webkit-flex;
@@ -572,7 +572,7 @@ main .wrapper .services_container .general {
 }
 @media screen and (max-width: 1000px) {
   main .wrapper .services_container .general {
-    max-width: -webkit-calc(18.33333333%);
+    max-width: -webkit-calc(100% / 3 - 15px);
     max-width: calc(100% / 3 - 15px);
   }
 }
@@ -850,129 +850,67 @@ section:not(.constacts_header) .wrapper {
   }
 }
 section:not(.constacts_header) .wrapper .contacts {
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -moz-box-align: start;
-  align-items: flex-start;
-  padding: 20px;
   background-color: white;
   border-radius: 10px;
+  padding: 15px 20px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
   section:not(.constacts_header) .wrapper .contacts {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 750px) {
-  section:not(.constacts_header) .wrapper .contacts {
-    width: 80%;
-    padding: 10px;
-  }
-}
-@media screen and (max-width: 550px) {
-  section:not(.constacts_header) .wrapper .contacts {
-    width: 100%;
-    padding: 10px;
-  }
-}
-@media screen and (max-width: 450px) {
-  section:not(.constacts_header) .wrapper .contacts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
     flex-direction: column;
-    width: 70%;
-    padding: 0 30px;
+    padding: 20px 20px;
   }
 }
-@media screen and (max-width: 450px) {
-  section:not(.constacts_header) .wrapper .contacts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
-    flex-direction: column;
-    width: 80%;
-    padding: 0 20px;
-  }
-}
-section:not(.constacts_header) .wrapper .contacts .tel-content {
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  justify-content: center;
-  padding: 15px 0;
+section:not(.constacts_header) .wrapper .contacts > div {
+  padding: 0 20px;
   border-right: 1px solid #e4e3e3;
-}
-@media screen and (max-width: 500px) {
-  section:not(.constacts_header) .wrapper .contacts .tel-content {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-box-pack: start;
-    justify-content: flex-start;
-  }
-}
-@media screen and (max-width: 450px) {
-  section:not(.constacts_header) .wrapper .contacts .tel-content {
-    width: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    justify-content: center;
-    border: none;
-    border-bottom: 1px solid #e4e3e3;
-    padding-bottom: -webkit-calc(7.5px);
-    padding-bottom: calc(15px / 2);
-  }
-}
-section:not(.constacts_header) .wrapper .contacts .email {
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -moz-box-align: start;
-  align-items: flex-start;
-  padding-top: 15px;
+  flex-direction: column;
+  cursor: pointer;
 }
-@media screen and (max-width: 500px) {
-  section:not(.constacts_header) .wrapper .contacts .email {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -moz-box-pack: end;
-    justify-content: flex-end;
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts > div {
+    border-bottom: 1px solid #e4e3e3;
+    border-right: none;
+    flex-direction: row;
+    padding: 10px 0;
   }
 }
-@media screen and (max-width: 450px) {
-  section:not(.constacts_header) .wrapper .contacts .email {
-    width: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    justify-content: center;
-    padding: 0;
-    padding-bottom: 15px;
-    padding-top: -webkit-calc(7.5px);
-    padding-top: calc(15px / 2);
+section:not(.constacts_header) .wrapper .contacts > div > p {
+  font-family: "Bold";
+  font-size: 1.125rem;
+}
+section:not(.constacts_header) .wrapper .contacts > div > p i {
+  color: #e45e5e;
+  margin-left: 7px;
+  font-size: 1.3rem;
+}
+section:not(.constacts_header) .wrapper .contacts > div:hover > a {
+  color: #e45e5e;
+}
+section:not(.constacts_header) .wrapper .contacts > div a {
+  padding-top: 10px;
+  font-family: "Medium";
+  font-size: 1.1875rem;
+  color: #979797;
+  text-decoration: underline;
+  text-decoration-color: #e45e5e;
+}
+section:not(.constacts_header) .wrapper .contacts > div a:visited {
+  text-decoration-color: #979797;
+}
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts > div a {
+    padding-top: 0;
+    padding-left: 10px;
+  }
+}
+section:not(.constacts_header) .wrapper .contacts > div:last-of-type {
+  border-right: none;
+}
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts > div:last-of-type {
+    border-bottom: none;
   }
 }
 section:not(.constacts_header) .wrapper .contacts .tel-content,
@@ -980,17 +918,28 @@ section:not(.constacts_header) .wrapper .contacts .email p {
   font-family: "Bold";
   font-size: 1.125rem;
 }
+section:not(.constacts_header) .wrapper .contacts .email p + p {
+  padding-top: 10px;
+}
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts .email p + p {
+    padding-top: 0;
+    padding-left: 10px;
+  }
+}
 section:not(.constacts_header) .wrapper .contacts .tel-number p,
 section:not(.constacts_header) .wrapper .contacts .email p + p {
   font-family: "Medium";
   font-size: 1.1875rem;
   color: #979797;
-  padding-left: 30px;
 }
-@media screen and (max-width: 450px) {
-  section:not(.constacts_header) .wrapper .contacts .tel-number p,
-  section:not(.constacts_header) .wrapper .contacts .email p + p {
-    padding-left: 10px;
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts .tel-number {
+    display: flex;
+    margin-left: 10px;
+  }
+  section:not(.constacts_header) .wrapper .contacts .tel-number p:first-child {
+    padding-right: 8px;
   }
 }
 article .wrapper .allColective {
