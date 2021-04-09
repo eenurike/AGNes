@@ -854,6 +854,11 @@ section:not(.constacts_header) .wrapper .contacts > div > p i {
   margin-left: 7px;
   font-size: 1.3rem;
 }
+@media screen and (max-width: 850px) {
+  section:not(.constacts_header) .wrapper .contacts > div > p i {
+    display: none;
+  }
+}
 section:not(.constacts_header) .wrapper .contacts > div:hover > a {
   color: #e45e5e;
 }
