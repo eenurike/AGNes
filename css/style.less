@@ -1062,11 +1062,25 @@ article {
           -webkit-box-flex: 1;
           -ms-flex-positive: 1;
           flex-grow: 1;
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
 
-          img {
-            max-width: 100%;
-            height: 100%;
+          .main_image {
+            width: 300px;
+            height: 250px;
+            border-radius: 45%;
+            overflow: hidden;
+            // object-fit: contain;
+
+
+            img {
+              max-width: 100%;
+              height: 100%;
+            }
           }
+
+          
         }
 
         p {
@@ -1207,7 +1221,7 @@ article {
 
           .teamlead-photo {
             max-width: 100%;
-            height: 430px;
+            height: 300px;
             border: none;
             border-bottom: 1px solid #e4e3e3;
             display: -webkit-box;
@@ -1216,20 +1230,8 @@ article {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
-
-            background-image: url("../img/agnes-logo2.png");
-            background-repeat: repeat-x;
-            background-size: 144px;
-            background-position: 287px center;
-            background-attachment: local;
-
-            img {
-              display: block;
-            }
-
-            img:nth-of-type(1) {
-              display: none;
-            }
+            align-items: center;
+            margin-top: unset;
           }
 
           .teamlead-history_block1 {
@@ -1246,17 +1248,6 @@ article {
           }
         }
 
-        @media screen and (min-width: 801px) {
-          .teamlead-photo {
-            img {
-              display: block;
-            }
-
-            img:nth-of-type(2) {
-              display: none;
-            }
-          }
-        }
 
         @media screen and (max-width: 550px) {
           max-width: 100%;
@@ -1277,7 +1268,7 @@ article {
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            width: 80%;
+            width: 90%;
             height: 350px;
             border: 1px solid #e4e3e3;
             border-radius: 11px;
@@ -1285,7 +1276,7 @@ article {
             margin: 0 auto;
 
             .image {
-              height: 250px;
+              height: 300px;
               background-repeat: no-repeat;
               background-size: cover;
               background-position: center center;
@@ -1295,27 +1286,18 @@ article {
               background-color: lightgray;
 
               background-image: url("../img/placeholder.png");
-              background-position: center 18%;
 
-              &.staff1 {
-                background-image: url("../img/staff1.jpg");
-                background-position: center 18%;
-                background-size: 250px;
-              }
-
-              &.staff2 {
-                background-image: url("../img/staff2.jpg");
-                background-position: center 18%;
-              }
 
               &.staff3 {
                 background-image: url("../img/staff3.jpg");
-                background-position: center 18%;
               }
 
               &.staff4 {
                 background-image: url("../img/staff4.jpg");
-                background-position: center 18%;
+              }
+
+              &.katya {
+                background-image: url("../img/katya.jpg");
               }
             }
 
@@ -1326,26 +1308,23 @@ article {
               p {
                 font-family: "Extra-Bold";
                 font-size: 1.4375rem;
+                padding: 5px 0;
 
                 &:nth-of-type(2) {
                   font-family: "Bold";
                   font-size: 1.125rem;
                   padding: 10px 0;
+                }
 
                   span {
                     font-size: 1.1875rem;
                     font-family: "Medium";
                     color: #979797;
-                    margin-left: 15px;
+                    margin-left: 5px;
                   }
-                }
+                
               }
 
-              &.staff3 {
-                span {
-                  margin-left: 5px !important;
-                }
-              }
 
               &.commonPadding {
                 padding-bottom: 0;

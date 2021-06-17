@@ -942,8 +942,17 @@ article .wrapper .collective .teamlead-photo {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
-article .wrapper .collective .teamlead-photo img {
+article .wrapper .collective .teamlead-photo .main_image {
+  width: 300px;
+  height: 250px;
+  border-radius: 45%;
+  overflow: hidden;
+}
+article .wrapper .collective .teamlead-photo .main_image img {
   max-width: 100%;
   height: 100%;
 }
@@ -1061,7 +1070,7 @@ article .wrapper .collective .teamlead .text > p:nth-child(2) {
   }
   article .wrapper .collective .teamlead .teamlead-photo {
     max-width: 100%;
-    height: 430px;
+    height: 300px;
     border: none;
     border-bottom: 1px solid #e4e3e3;
     display: -webkit-box;
@@ -1070,17 +1079,8 @@ article .wrapper .collective .teamlead .text > p:nth-child(2) {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-image: url("../img/agnes-logo2.png");
-    background-repeat: repeat-x;
-    background-size: 144px;
-    background-position: 287px center;
-    background-attachment: local;
-  }
-  article .wrapper .collective .teamlead .teamlead-photo img {
-    display: block;
-  }
-  article .wrapper .collective .teamlead .teamlead-photo img:nth-of-type(1) {
-    display: none;
+    align-items: center;
+    margin-top: unset;
   }
   article .wrapper .collective .teamlead .teamlead-history_block1 {
     max-width: 100%;
@@ -1092,14 +1092,6 @@ article .wrapper .collective .teamlead .text > p:nth-child(2) {
     margin: 0;
     border: none;
     padding-top: 20px;
-  }
-}
-@media screen and (min-width: 801px) {
-  article .wrapper .collective .teamlead .teamlead-photo img {
-    display: block;
-  }
-  article .wrapper .collective .teamlead .teamlead-photo img:nth-of-type(2) {
-    display: none;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1121,14 +1113,14 @@ article .wrapper .collective .staff-container .staff-wrapper .staff {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   height: 350px;
   border: 1px solid #e4e3e3;
   border-radius: 11px;
   margin: 0 auto;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image {
-  height: 250px;
+  height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1137,24 +1129,15 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .image {
   border-top-right-radius: 11px;
   background-color: lightgray;
   background-image: url("../img/placeholder.png");
-  background-position: center 18%;
-}
-article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff1 {
-  background-image: url("../img/staff1.jpg");
-  background-position: center 18%;
-  background-size: 250px;
-}
-article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff2 {
-  background-image: url("../img/staff2.jpg");
-  background-position: center 18%;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff3 {
   background-image: url("../img/staff3.jpg");
-  background-position: center 18%;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff4 {
   background-image: url("../img/staff4.jpg");
-  background-position: center 18%;
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .image.katya {
+  background-image: url("../img/katya.jpg");
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text {
   padding-top: 15px;
@@ -1163,20 +1146,18 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .text {
 article .wrapper .collective .staff-container .staff-wrapper .staff .text p {
   font-family: "Extra-Bold";
   font-size: 1.4375rem;
+  padding: 5px 0;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text p:nth-of-type(2) {
   font-family: "Bold";
   font-size: 1.125rem;
   padding: 10px 0;
 }
-article .wrapper .collective .staff-container .staff-wrapper .staff .text p:nth-of-type(2) span {
+article .wrapper .collective .staff-container .staff-wrapper .staff .text p span {
   font-size: 1.1875rem;
   font-family: "Medium";
   color: #979797;
-  margin-left: 15px;
-}
-article .wrapper .collective .staff-container .staff-wrapper .staff .text.staff3 span {
-  margin-left: 5px !important;
+  margin-left: 5px;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text.commonPadding {
   padding-bottom: 0;
