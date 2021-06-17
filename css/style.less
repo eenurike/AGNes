@@ -1062,8 +1062,12 @@ article {
           -webkit-box-flex: 1;
           -ms-flex-positive: 1;
           flex-grow: 1;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           margin-top: 40px;
 
           .main_image {
@@ -1230,7 +1234,9 @@ article {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin-top: unset;
           }
 
