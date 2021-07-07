@@ -1132,12 +1132,27 @@ article .wrapper .collective .staff-container .staff-wrapper .staff .image {
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff3 {
   background-image: url("../img/staff3.jpg");
+  background-size: 390px 390px;
+  background-position: center -60px;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.staff4 {
   background-image: url("../img/staff4.jpg");
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .image.katya {
   background-image: url("../img/katya.jpg");
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .image.izyat {
+  background-image: url("../img/izyat.jpg");
+  background-position: center -150px;
+}
+@media screen and (max-width: 600px) {
+  article .wrapper .collective .staff-container .staff-wrapper .staff .image.izyat {
+    background-position: center -170px;
+  }
+}
+article .wrapper .collective .staff-container .staff-wrapper .staff .image.gulim {
+  background-image: url("../img/gulim.jpg");
+  background-position: center -100px;
 }
 article .wrapper .collective .staff-container .staff-wrapper .staff .text {
   padding-top: 15px;
